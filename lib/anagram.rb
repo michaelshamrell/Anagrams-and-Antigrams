@@ -1,3 +1,11 @@
 class Word
-  def intialize(word)
-    @word1 = word1.downcase.gsub(/[^a-z]/, '').chars
+  def intialize(word1, word2)
+    @word1 = similize(word1)
+    @word2 = similize(word2)
+  end
+  def similize
+    downcase.gsub(/[^a-z]/, '').chars
+  end
+
+  def real_word()
+    vowels = ['a', 'e', 'i', 'o', 'u']
