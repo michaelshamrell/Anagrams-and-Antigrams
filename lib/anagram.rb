@@ -7,5 +7,11 @@ class Word
     downcase.gsub(/[^a-z]/, '').chars
   end
 
-  def real_word()
-    vowels = ['a', 'e', 'i', 'o', 'u']
+  def real_word?
+    if @word1.scan(/[aeiou]/).count >= 1 && @word2.scan(/[aeiou]/).count >= 1
+      return true
+    else 
+      return false 
+    end
+  end
+   
